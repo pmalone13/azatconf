@@ -362,6 +362,7 @@
                 "Canonical:0001-com-ubuntu-server-focal:20_04-lts-gen2",
                 "Canonical:0001-com-ubuntu-server-jammy:22_04-lts-gen2",
                 "RedHat:RHEL:7.5",
+                "RedHat:RHEL:8.2",                
                 "OpenLogic:CentOS:7.5",
                 "credativ:Debian:9-backports"
             ],
