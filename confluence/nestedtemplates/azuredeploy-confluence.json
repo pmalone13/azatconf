@@ -486,12 +486,13 @@
         },
         "linuxOsType": {
             "type": "string",
-            "defaultValue": "Canonical:UbuntuServer:18.04-LTS",
+            "defaultValue": "RedHat:RHEL:8.2",
             "allowedValues": [
                 "Canonical:UbuntuServer:18.04-LTS",
                 "Canonical:0001-com-ubuntu-server-focal:20_04-lts-gen2",
                 "Canonical:0001-com-ubuntu-server-jammy:22_04-lts-gen2",
                 "RedHat:RHEL:7.5",
+                "RedHat:RHEL:8.2",                
                 "OpenLogic:CentOS:7.5",
                 "credativ:Debian:9-backports"
             ],
