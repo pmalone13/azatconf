@@ -356,7 +356,7 @@
         },
         "linuxOsType": {
             "type": "string",
-            "defaultValue": "Canonical:UbuntuServer:18.04-LTS",
+            "defaultValue": "RedHat:RHEL:8.2",
             "allowedValues": [
                 "Canonical:UbuntuServer:18.04-LTS",
                 "Canonical:0001-com-ubuntu-server-focal:20_04-lts-gen2",
