@@ -12,7 +12,7 @@
         },
         "_artifactsLocation": {
             "type": "string",
-            "defaultValue": "https://raw.githubusercontent.com/pmalone13/azatconf/master/",
+            "defaultValue": "https://raw.githubusercontent.com/pmalone13/azatconf/confluence/master/",
             "metadata": {
                 "description": "The URL specifying the location of the installation artifacts."
             }
