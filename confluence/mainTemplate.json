@@ -12,7 +12,7 @@
         },
         "_artifactsLocation": {
             "type": "string",
-            "defaultValue": "[deployment().properties.templateLink.uri]",
+            "defaultValue": "https://raw.githubusercontent.com/pmalone13/azatconf/master/",
             "metadata": {
                 "description": "The URL specifying the location of the installation artifacts."
             }
@@ -64,7 +64,7 @@
                 "Azure SQL DB",
                 "Azure DB for PostgreSQL"
             ],
-            "defaultValue": "Azure SQL DB",
+            "defaultValue": "Azure DB for PostgreSQL"
             "metadata": {
                 "description": "The database type."
             }
@@ -79,14 +79,14 @@
                 "large",
                 "enterprise"
             ],
-            "defaultValue": "",
+            "defaultValue": "trial",
             "metadata": {
                 "description": "To use recommended hardware options for the Confluence installation choose a size. NB if selected all further Gateway, VM, DB size parameters will be IGNORED."
             }
         },
         "cname": {
             "type": "string",
-            "defaultValue": "",
+            "defaultValue": "edc.usda.gov",
             "metadata": {
                 "description": "This is the Canonical Name record (CNAME) for your organization. If you don't provide one, Azure will generate a random domain"
             }
@@ -107,6 +107,7 @@
         },
         "sshKey": {
             "type": "string",
+            "defaultValue": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDUUp1aVX5ogJSjvz1oy1Z/fHfMwLXyMi+mrjao9cX8tFmh+H0lYZulEF9APJwm/w50KMaeLZnsOQY6xZQV0Kn0O48+TJxsAiiEGSegVUt3I9OvsdwxAf5SOps21cKki1DXiEY86PZ+Jyd3KUj++aE274M1Six+e8eRDBhYP/pHtg5Fe6GLwuoLXervmqI/EDfGpI9AxgvXFhwxbbgeVV3UljW2uT7lRw1AirQDRt35iahYZTNkgC0xrb6UGw7ISaa2n5JCjxgUrrTY1sQY4m83cAFPeDIqW5scgsbHf9ppXOwp1g+12ayhoxOL5TuODE6nCp/bT2gXw1DJ0QDjFtv+vtn5T+mXgwQa/Y4XY+n7sVTwBcHAfAKXUWmYRTQ/0tJ+E3tTC3PmJGPV6kY9cDFpaSWg1OqHAGo9wMo3D2MjICu1BUM+h+2P6YAL0qX6IPEBTJZ/uul9V1laCuyc7/7Wg6WvwQkEGCmWsRJv7VGwnQrimRJtPM2kWKSj2UydzkE= generated-by-azure",			         
             "metadata": {
                 "description": "The SSH public key to use to access the Jumpbox."
             },
@@ -114,6 +115,7 @@
         },
         "sshUserName": {
             "type": "string",
+            "defaultValue": "confadmin",
             "minLength": 5,
             "metadata": {
                 "description": "The SSH username to use to access the Confluence nodes from the Jumpbox. Note that access to the Confluence nodes can only be made in this way."
@@ -121,7 +123,7 @@
         },
         "confAdminUserName": {
             "type": "string",
-            "defaultValue": "admin",
+            "defaultValue": "confadmin",
             "minLength": 5,
             "metadata": {
                 "description": "The username for the Confluence Administrator's account. Has to be in lowercase."
@@ -129,6 +131,7 @@
         },
         "confAdminUserPassword": {
             "type": "securestring",
+            "defaultValue": "Walet1!Helmet",            
             "minLength": 5,
             "metadata": {
                 "description": "The password for the Confluence Administrator's account."
@@ -144,7 +147,7 @@
         },
         "confAdminUserEmail": {
             "type": "string",
-            "defaultValue": "admin@example.com",
+            "defaultValue": "paul.malone@usda.gov",
             "minLength": 5,
             "metadata": {
                 "description": "The email address of the Confluence Administrator user."
@@ -194,6 +197,7 @@
         },
         "dbPassword": {
             "type": "securestring",
+            "defaultValue": "Walet1!Helmet",            
             "minLength": 8,
             "metadata": {
                 "description": "The password for the dedicated database user."
@@ -368,12 +372,13 @@
         },
         "linuxOsType": {
             "type": "string",
-            "defaultValue": "Canonical:UbuntuServer:18.04-LTS",
+            "defaultValue": "RedHat:RHEL:8.2",
             "allowedValues": [
                 "Canonical:UbuntuServer:18.04-LTS",
                 "Canonical:0001-com-ubuntu-server-focal:20_04-lts-gen2",
                 "Canonical:0001-com-ubuntu-server-jammy:22_04-lts-gen2",
                 "RedHat:RHEL:7.5",
+                "RedHat:RHEL:8.2",                
                 "OpenLogic:CentOS:7.5",
                 "credativ:Debian:9-backports"
             ],
@@ -454,7 +459,7 @@
         },
         "postgresDbVersion": {
             "type": "string",
-            "defaultValue": "9.6",
+            "defaultValue": "10",
             "allowedValues": [
                 "9.6",
                 "10"
@@ -504,21 +509,21 @@
         },
         "enableEmailAlerts": {
             "type": "bool",
-            "defaultValue": true,
+            "defaultValue": false,
             "metadata": {
                 "description": "Enable email alerts."
             }
         },
         "enableApplicationInsights": {
             "type": "bool",
-            "defaultValue": true,
+            "defaultValue": false,
             "metadata": {
                 "description": "Enable Azure Application Insights."
             }
         },
         "enableAnalytics": {
             "type": "bool",
-            "defaultValue": true,
+            "defaultValue": false,
             "metadata": {
                 "description": "Enable Azure Operational Insights."
             }
