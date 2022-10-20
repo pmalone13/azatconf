@@ -763,10 +763,14 @@ function wait_until_startup_complete {
     log "sleeping for 10 seconds..."
     sleep 10
   done
-  tail -f ${ATL_CONFLUENCE_HOME}/logs/atlassian-confluence.log | while read LOGLINE
-  do
-    [[ "${LOGLINE}" == *"Confluence is ready to serve"* ]] && pkill -P $$ tail
-  done
+  
+  #tail -f ${ATL_CONFLUENCE_HOME}/logs/atlassian-confluence.log | while read LOGLINE
+  #do
+  #  [[ "${LOGLINE}" == *"Confluence is ready to serve"* ]] && pkill -P $$ tail
+  #done
+  #Malone 10/20
+  #commented out because no license and it will fail to start, allowing to proceed after 3 minutes
+  sleep 180
   rm -rfv ${ATL_CONFLUENCE_SHARED_HOME}/node.id.${unique_node_id}
 }
 
