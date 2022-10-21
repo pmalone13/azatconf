@@ -79,7 +79,8 @@
                     "name": "[concat(variables('namespace'), 'appgwfeipconfig')]",
                     "private": {
                         "name": "[concat(variables('namespace'), 'appgwfeipconfig-private')]",
-                        "address": "10.0.1.99"
+                        //"address": "10.0.1.99"
+                        "address": "10.213.73.150
                     }
                 },
                 "portConfiguration": {
